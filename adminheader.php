@@ -280,46 +280,6 @@
     <a href="products.php">Products</a>
     <a href="cart.php">Cart</a>
 
-    <?php if(isset($_SESSION['user_id'])): 
-      // Get user data from session
-      $user_name = $_SESSION['name'] ?? 'User';
-      $user_email = $_SESSION['email'] ?? '';
-    ?>
-      <!-- User Dropdown -->
-      <div class="user-dropdown">
-        <div class="user-dropdown-trigger">
-          <i class="fas fa-user"></i>
-          <span><?php echo htmlspecialchars($user_name); ?></span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        
-        <div class="dropdown-menu">
-          <div class="dropdown-header">
-            <div class="user-name"><?php echo htmlspecialchars($user_name); ?></div>
-            <div class="user-email"><?php echo htmlspecialchars($user_email); ?></div>
-          </div>
-          
-          <div class="dropdown-items">
-            <a href="profile.php" class="dropdown-item">
-              <i class="fas fa-user"></i>
-              <span>My Profile</span>
-            </a>
-            
-            <a href="orders.php" class="dropdown-item">
-              <i class="fas fa-shopping-bag"></i>
-              <span>My Orders</span>
-            </a>
-            
-            <div class="dropdown-divider"></div>
-            
-            <a href="login.php" class="dropdown-item">
-              <i class="fas fa-sign-out-alt"></i>
-              <span>Logout</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
     <?php else: ?>
       <!-- Auth Buttons for non-logged in users -->
       <div class="auth-buttons">
